@@ -1,0 +1,5 @@
+# Pin the Rust toolchain so cargokit and CI produce reproducible native builds
+# (clo_generator + the vendored btleplug/midir FFI crates) instead of tracking
+# whatever `stable` the build host happens to have. Bump deliberately.
+[toolchain]
+channel = "1.94.1"

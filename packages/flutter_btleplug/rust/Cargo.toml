@@ -1,0 +1,18 @@
+[package]
+name = "flutter_btleplug"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "staticlib"]
+
+[dependencies]
+flutter_rust_bridge = "=2.12.0"
+btleplug = "0.11"
+tokio = { version = "1", features = ["rt-multi-thread", "time"] }
+futures = "0.3"
+uuid = "1"
+
+
+[lints.rust]
+unexpected_cfgs = { level = "warn", check-cfg = ['cfg(frb_expand)'] }
