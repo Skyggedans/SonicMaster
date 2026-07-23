@@ -1,0 +1,16 @@
+<svg width="80" height="130" viewBox="0 0 80 130" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="drv">
+  <defs>
+    <mask id="m_drv" maskUnits="userSpaceOnUse" x="0" y="0" width="80" height="130">
+  <rect x="2" y="2" width="76" height="126" rx="10" fill="#fff"></rect>
+  <rect x="8" y="8" width="64" height="40" rx="4" fill="#000"></rect>
+  <circle cx="22" cy="28" r="7" fill="#fff"></circle>
+  <circle cx="40" cy="28" r="7" fill="#fff"></circle>
+  <circle cx="58" cy="28" r="7" fill="#fff"></circle>
+  <circle cx="40" cy="54" r="3" fill="#000"></circle>
+  <rect x="20" y="65" width="40" height="40" rx="6" fill="#000"></rect>
+  <circle cx="40" cy="85" r="7" fill="#fff"></circle>
+  <circle cx="40" cy="85" r="3" fill="#000"></circle>
+    </mask>
+  </defs>
+  <rect x="0" y="0" width="80" height="130" fill="currentColor" mask="url(#m_drv)"></rect>
+</svg>

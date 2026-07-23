@@ -1,0 +1,5 @@
+<svg width="120" height="130" viewBox="0 0 120 130" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="reverb">
+  <rect x="6" y="25" width="108" height="6" rx="3" fill="currentColor"></rect>
+  <rect x="6" y="99" width="108" height="6" rx="3" fill="currentColor"></rect>
+  <polyline points="3,65 25,33 49,97 71,38 92,90 113,63" fill="none" stroke="currentColor" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"></polyline>
+</svg>

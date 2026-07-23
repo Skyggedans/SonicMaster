@@ -1,0 +1,13 @@
+<svg width="80" height="130" viewBox="0 0 80 130" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="nr">
+  <defs>
+    <mask id="m_nr" maskUnits="userSpaceOnUse" x="0" y="0" width="80" height="130">
+  <rect x="2" y="2" width="76" height="126" rx="10" fill="#fff"></rect>
+  <circle cx="40" cy="32" r="14" fill="#000"></circle>
+  <circle cx="40" cy="24" r="2.5" fill="#fff"></circle>
+  <rect x="8" y="54" width="64" height="70" rx="4" fill="#000"></rect>
+  <circle cx="40" cy="100" r="12" fill="#fff"></circle><circle cx="40" cy="100" r="7" fill="#000"></circle><circle cx="40" cy="100" r="3" fill="#fff"></circle>
+  <circle cx="40" cy="9" r="4" fill="#000"></circle>
+    </mask>
+  </defs>
+  <rect x="0" y="0" width="80" height="130" fill="currentColor" mask="url(#m_nr)"></rect>
+</svg>

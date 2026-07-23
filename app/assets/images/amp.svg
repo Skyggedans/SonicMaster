@@ -1,0 +1,16 @@
+<svg width="92" height="80" viewBox="0 0 92 80" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="amp">
+  <defs>
+    <mask id="m_amp" maskUnits="userSpaceOnUse" x="0" y="0" width="92" height="80">
+  <rect x="2" y="10" width="88" height="60" rx="8" fill="#fff"></rect>
+  <path d="M30 10 V4 H62 V10" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"></path>
+  <rect x="13" y="70" width="10" height="4" rx="2" fill="#fff"></rect>
+  <rect x="69" y="70" width="10" height="4" rx="2" fill="#fff"></rect>
+  <rect x="10" y="48" width="72" height="18" rx="4" fill="#000"></rect>
+  <circle cx="23" cy="57" r="4" fill="#fff"></circle>
+  <circle cx="39" cy="57" r="4" fill="#fff"></circle>
+  <circle cx="54" cy="57" r="4" fill="#fff"></circle>
+  <circle cx="69" cy="57" r="4" fill="#fff"></circle>
+    </mask>
+  </defs>
+  <rect x="0" y="0" width="92" height="80" fill="currentColor" mask="url(#m_amp)"></rect>
+</svg>

@@ -1,0 +1,39 @@
+name: Stamp version
+description: >
+  On a v* tag build, stamp app/pubspec.yaml's version + msix_version from the tag
+  so every artifact is versioned consistently — flutter build, the MSIX, and the
+  tarball / DMG / AppImage scripts all read the version from pubspec. The build
+  number is the workflow run number (monotonic). A no-op on branch / dispatch
+  builds, which stay on the pubspec version as dev artifacts.
+
+runs:
+  using: composite
+  steps:
+    - shell: bash
+      run: |
+        set -euo pipefail
+
+        if [[ "${GITHUB_REF_TYPE}" != "tag" || "${GITHUB_REF_NAME}" != v* ]]; then
+          echo "Not a v* tag build (${GITHUB_REF_NAME}) — leaving the pubspec version as-is (dev artifact)."
+          grep -E '^version:|^  msix_version:' app/pubspec.yaml
+          exit 0
+        fi
+
+        version="${GITHUB_REF_NAME#v}"
+
+        if [[ ! "${version}" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+          echo "::error::Release tag '${GITHUB_REF_NAME}' is not vMAJOR.MINOR.PATCH — refusing to build a mis-versioned artifact."
+          exit 1
+        fi
+
+        build="${GITHUB_RUN_NUMBER}"
+
+        # sed -i.bak + rm is portable across GNU (linux) and BSD (macOS) sed.
+        sed -i.bak \
+          -e "s/^version: .*/version: ${version}+${build}/" \
+          -e "s/^  msix_version: .*/  msix_version: ${version}.0/" \
+          app/pubspec.yaml
+        rm -f app/pubspec.yaml.bak
+
+        echo "Stamped version ${version}+${build} (msix ${version}.0) from ${GITHUB_REF_NAME}"
+        grep -E '^version:|^  msix_version:' app/pubspec.yaml
