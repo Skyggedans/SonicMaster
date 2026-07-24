@@ -1,0 +1,147 @@
+name: build
+
+# Builds distributable artifacts for Linux, Windows, and macOS. The native
+# .nam→.clo DSP crate (clo_generator) is compiled by cargokit, so each job sets
+# up Rust. (Windows/macOS binaries can only be built on their own runners.) A
+# `v*` tag builds all three and publishes a GitHub Release with the artifacts
+# attached; workflow_dispatch builds them without releasing.
+# The web build/deploy is a separate workflow (pages.yml) — no Rust there (web
+# uses the pure-Dart DSP port).
+
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+
+env:
+  FLUTTER_VERSION: '3.44.2'
+
+jobs:
+  linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/stamp-version
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: ${{ env.FLUTTER_VERSION }}
+          channel: stable
+      - name: System deps
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ninja-build libgtk-3-dev libasound2-dev \
+            desktop-file-utils
+      - name: Analyze + test
+        working-directory: app
+        run: |
+          flutter pub get
+          flutter analyze lib
+          flutter test
+      - name: appimagetool
+        run: |
+          curl -sL -o /usr/local/bin/appimagetool \
+            https://github.com/AppImage/appimagetool/releases/download/continuous/appimagetool-x86_64.AppImage
+          chmod +x /usr/local/bin/appimagetool
+      - name: Package (tarball + AppImage)
+        env:
+          APPIMAGETOOL: /usr/local/bin/appimagetool
+        run: |
+          bash tools/package/linux-tarball.sh
+          bash tools/package/linux-appimage.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: linux
+          path: dist/*
+          if-no-files-found: error
+
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/stamp-version
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: ${{ env.FLUTTER_VERSION }}
+          channel: stable
+      - name: Install NSIS
+        shell: pwsh
+        run: |
+          choco install nsis -y --no-progress
+          Add-Content -Path $env:GITHUB_PATH -Value "C:\Program Files (x86)\NSIS"
+      - name: Flutter deps
+        working-directory: app
+        run: flutter pub get
+      # windows-nsis.ps1 builds the release bundle and drives makensis, reading
+      # the (tag-stamped) version from pubspec. NSIS is the preferred installer;
+      # the MSIX path self-signs a test cert and isn't user-installable, so CI
+      # ships the NSIS setup.exe instead (msix_config stays for local Store builds).
+      - name: Package (NSIS installer)
+        shell: pwsh
+        run: pwsh -File tools/package/windows-nsis.ps1
+      - uses: actions/upload-artifact@v4
+        with:
+          name: windows
+          path: dist/*.exe
+          if-no-files-found: error
+
+  macos:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/stamp-version
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: ${{ env.FLUTTER_VERSION }}
+          channel: stable
+      - name: Build + DMG
+        run: bash tools/package/macos-dmg.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: macos
+          path: dist/*.dmg
+          if-no-files-found: error
+
+  # On a v* tag, gather all three platforms' artifacts and publish a GitHub
+  # Release with them attached. Guarded to the public repo so a stray tag on a
+  # fork/mirror never cuts a release. Uses the built-in token — no PAT needed.
+  release:
+    needs: [linux, windows, macos]
+    # Only a v* tag PUSH cuts a release — never a workflow_dispatch (which can be
+    # aimed at a tag ref), and only on the public repo.
+    if: github.event_name == 'push' && github.ref_type == 'tag' && github.repository == 'Skyggedans/SonicMaster'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: release-artifacts
+      - name: Publish GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          # Refuse to publish unless every platform produced artifacts.
+          for platform in linux windows macos; do
+            if [ -z "$(find "release-artifacts/${platform}" -type f 2>/dev/null)" ]; then
+              echo "::error::no artifacts for ${platform} — refusing to publish an incomplete release"
+              exit 1
+            fi
+          done
+          mapfile -t files < <(find release-artifacts -type f | sort)
+          printf 'Attaching:\n%s\n' "$(printf '  %s\n' "${files[@]}")"
+          notes="SonicMaster ${GITHUB_REF_NAME} — desktop editor for the Sonicake Pocket Master / Smart Box. See the README for features and install notes."
+          # Idempotent: create the release, or refresh its assets if a re-run finds it already exists.
+          if gh release view "${GITHUB_REF_NAME}" --repo "${GITHUB_REPOSITORY}" >/dev/null 2>&1; then
+            gh release upload "${GITHUB_REF_NAME}" --repo "${GITHUB_REPOSITORY}" --clobber "${files[@]}"
+          else
+            gh release create "${GITHUB_REF_NAME}" \
+              --repo "${GITHUB_REPOSITORY}" \
+              --title "${GITHUB_REF_NAME}" \
+              --notes "${notes}" \
+              "${files[@]}"
+          fi

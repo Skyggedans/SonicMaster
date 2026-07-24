@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=SonicMaster
+GenericName=Guitar Pedal Editor
+Comment=Edit the Sonicake Pocket Master multi-effects pedal
+Exec=sonicmaster
+Icon=dev.skyggedans.sonicmaster
+Terminal=false
+Categories=AudioVideo;Audio;
+Keywords=guitar;pedal;midi;sonicake;effects;
+StartupWMClass=dev.skyggedans.sonicmaster
