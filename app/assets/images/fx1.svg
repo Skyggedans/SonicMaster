@@ -1,0 +1,16 @@
+<svg width="80" height="130" viewBox="0 0 80 130" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="fx1">
+  <defs>
+    <mask id="m_fx1" maskUnits="userSpaceOnUse" x="0" y="0" width="80" height="130">
+  <path d="M2 10C2 5.58172 5.58172 2 10 2H70C74.4183 2 78 5.58172 78 10V120C78 124.418 74.4183 128 70 128H10C5.58172 128 2 124.418 2 120V10Z" fill="#fff"></path>
+  <circle cx="14" cy="24" r="6" fill="#000"></circle>
+  <circle cx="31" cy="24" r="6" fill="#000"></circle>
+  <circle cx="49" cy="24" r="6" fill="#000"></circle>
+  <circle cx="66" cy="24" r="6" fill="#000"></circle>
+  <line x1="2" y1="48" x2="78" y2="48" stroke="#000" stroke-width="2"></line>
+  <rect x="8" y="68" width="64" height="55" rx="4" fill="#000"></rect>
+  <circle cx="40" cy="100" r="12" fill="#fff"></circle><circle cx="40" cy="100" r="7" fill="#000"></circle><circle cx="40" cy="100" r="3" fill="#fff"></circle>
+  <circle cx="40" cy="9" r="4" fill="#000"></circle>
+    </mask>
+  </defs>
+  <rect x="0" y="0" width="80" height="130" fill="currentColor" mask="url(#m_fx1)"></rect>
+</svg>
