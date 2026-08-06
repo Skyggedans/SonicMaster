@@ -1,0 +1,61 @@
+name: pages
+
+# Builds the Flutter Web app (CanvasKit-JS renderer — no COOP/COEP needed) plus
+# the dart2js DSP web-worker, and deploys it to GitHub Pages. Pages serves over
+# HTTPS, the secure context Web MIDI / Web Bluetooth require. No Rust toolchain:
+# the web build uses the pure-Dart DSP port (lib/protocol/clo_dsp.dart), not the
+# native clo_generator crate.
+#
+# One-time setup: repo Settings -> Pages -> Source: "GitHub Actions".
+# For a project site the app is served under https://<owner>.github.io/<repo>/,
+# so the build passes --base-href /<repo>/ (below). For a user/org page
+# (<owner>.github.io) or a custom domain, change base-href to "/".
+#
+# Trigger branches: `master` is the PUBLIC repo's default (publish-public.sh
+# force-pushes the sanitized snapshot there); `web`/`main` cover the dev repo.
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [master, main, web]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Serialize deploys; let an in-progress deploy finish.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+env:
+  FLUTTER_VERSION: '3.44.2'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: ${{ env.FLUTTER_VERSION }}
+          channel: stable
+      - name: Build web + DSP worker
+        working-directory: app
+        # build_web.sh compiles web/dsp_level_worker.dart -> JS, then runs
+        # `flutter build web` (forwarding --base-href). --base-href must start
+        # and end with '/'.
+        run: |
+          flutter pub get
+          bash tools/build_web.sh --base-href "/${{ github.event.repository.name }}/"
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: app/build/web
+      - name: Deploy to GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@v4
