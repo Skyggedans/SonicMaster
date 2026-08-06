@@ -1,0 +1,40 @@
+PODS:
+  - clo_generator (0.0.1):
+    - FlutterMacOS
+  - flutter_btleplug (0.0.1):
+    - FlutterMacOS
+  - flutter_midir (0.0.1):
+    - FlutterMacOS
+  - FlutterMacOS (1.0.0)
+  - window_manager (0.2.0):
+    - FlutterMacOS
+
+DEPENDENCIES:
+  - clo_generator (from `Flutter/ephemeral/.symlinks/plugins/clo_generator/macos`)
+  - flutter_btleplug (from `Flutter/ephemeral/.symlinks/plugins/flutter_btleplug/macos`)
+  - flutter_midir (from `Flutter/ephemeral/.symlinks/plugins/flutter_midir/macos`)
+  - FlutterMacOS (from `Flutter/ephemeral`)
+  - window_manager (from `Flutter/ephemeral/.symlinks/plugins/window_manager/macos`)
+
+EXTERNAL SOURCES:
+  clo_generator:
+    :path: Flutter/ephemeral/.symlinks/plugins/clo_generator/macos
+  flutter_btleplug:
+    :path: Flutter/ephemeral/.symlinks/plugins/flutter_btleplug/macos
+  flutter_midir:
+    :path: Flutter/ephemeral/.symlinks/plugins/flutter_midir/macos
+  FlutterMacOS:
+    :path: Flutter/ephemeral
+  window_manager:
+    :path: Flutter/ephemeral/.symlinks/plugins/window_manager/macos
+
+SPEC CHECKSUMS:
+  clo_generator: 7bc4ab7312d353065dc0284dc094ce70e297097a
+  flutter_btleplug: 0d45c3295ecb2a296ed65fe0abb529d6b51c4b7e
+  flutter_midir: fced5dddd8c9605bfa961680e39384fa7376de3a
+  FlutterMacOS: d0db08ddef1a9af05a5ec4b724367152bb0500b1
+  window_manager: 3a1844359a6295ab1e47659b1a777e36773cd6e8
+
+PODFILE CHECKSUM: 54d867c82ac51cbd61b565781b9fada492027009
+
+COCOAPODS: 1.16.2
