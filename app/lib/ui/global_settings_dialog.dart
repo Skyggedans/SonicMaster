@@ -191,7 +191,7 @@ class GlobalSettingsDialog extends ConsumerWidget {
                         child: KnobControl(
                           value: g.backlight,
                           min: 0,
-                          max: 10,
+                          max: 100,
                           step: 1,
                           label: 'Backlight',
                           isEnabled: !isLoading,
