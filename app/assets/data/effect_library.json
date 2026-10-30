@@ -1,0 +1,5395 @@
+{
+  "1": {
+    "name": "Gate",
+    "descriptionEn": "Based on the ISP\u00ae Decimator\u2122* noise gate.",
+    "alg": [
+      {
+        "name": "THRE",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "101": {
+    "name": "COMP 1",
+    "descriptionEn": "Based on the Ross\u00ae Compressor*.",
+    "alg": [
+      {
+        "name": "Sustain",
+        "algId": 0,
+        "defaultValue": 20,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "102": {
+    "name": "COMP 2",
+    "descriptionEn": "Based on the Keeley\u00ae Compressor* (4-knob).",
+    "alg": [
+      {
+        "name": "Sustain",
+        "algId": 0,
+        "defaultValue": 20,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Attack",
+        "algId": 1,
+        "defaultValue": 60,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Clip",
+        "algId": 3,
+        "defaultValue": 10,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "103": {
+    "name": "Touch Wah",
+    "descriptionEn": "Wide-range envelope filter (touch wah) that follows your picking.",
+    "alg": [
+      {
+        "name": "Sense",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Range",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Q",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Mix",
+        "algId": 3,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Mode",
+        "algId": 4,
+        "defaultValue": 0,
+        "options": [
+          "Guitar",
+          "Bass"
+        ],
+        "widgetType": 2
+      }
+    ]
+  },
+  "104": {
+    "name": "Auto Wah",
+    "descriptionEn": "Auto-wah with a continuous sweep, for guitar or bass.",
+    "alg": [
+      {
+        "name": "Depth",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Rate",
+        "algId": 1,
+        "defaultValue": 0.5,
+        "min": 0.1,
+        "max": 10,
+        "step": 0.1,
+        "unit": "Hz",
+        "widgetType": 0,
+        "syncToggleAlgId": 6
+      },
+      {
+        "name": "Vol",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Low",
+        "algId": 3,
+        "defaultValue": 25,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Q",
+        "algId": 4,
+        "defaultValue": 70,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "High",
+        "algId": 5,
+        "defaultValue": 60,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Sync",
+        "algId": 6,
+        "defaultValue": 0,
+        "widgetType": 1
+      }
+    ]
+  },
+  "105": {
+    "name": "Boost",
+    "descriptionEn": "Based on the Xotic\u00ae EP Booster*.",
+    "alg": [
+      {
+        "name": "Gain",
+        "algId": 0,
+        "defaultValue": 20,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "+3dB",
+        "algId": 1,
+        "defaultValue": 1,
+        "widgetType": 1
+      },
+      {
+        "name": "Bright",
+        "algId": 2,
+        "defaultValue": 1,
+        "widgetType": 1
+      }
+    ]
+  },
+  "106": {
+    "name": "A-Chorus",
+    "descriptionEn": "Based on the Arion\u00ae SCH-1 Stereo Chorus*.",
+    "alg": [
+      {
+        "name": "Depth",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Rate",
+        "algId": 1,
+        "defaultValue": 0.5,
+        "min": 0.1,
+        "max": 10,
+        "step": 0.1,
+        "unit": "Hz",
+        "widgetType": 0,
+        "syncToggleAlgId": 3
+      },
+      {
+        "name": "Tone",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Sync",
+        "algId": 3,
+        "defaultValue": 0,
+        "widgetType": 1
+      }
+    ]
+  },
+  "107": {
+    "name": "B-Chorus",
+    "descriptionEn": "Vintage ensemble chorus voiced for bass.",
+    "alg": [
+      {
+        "name": "Depth",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Rate",
+        "algId": 1,
+        "defaultValue": 0.5,
+        "min": 0.1,
+        "max": 10,
+        "step": 0.1,
+        "unit": "Hz",
+        "widgetType": 0,
+        "syncToggleAlgId": 3
+      },
+      {
+        "name": "Vol",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Sync",
+        "algId": 3,
+        "defaultValue": 0,
+        "widgetType": 1
+      }
+    ]
+  },
+  "108": {
+    "name": "Flanger",
+    "descriptionEn": "Classic flanger with a rich, swirling sweep.",
+    "alg": [
+      {
+        "name": "Depth",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Rate",
+        "algId": 1,
+        "defaultValue": 0.5,
+        "min": 0.1,
+        "max": 10,
+        "step": 0.1,
+        "unit": "Hz",
+        "widgetType": 0,
+        "syncToggleAlgId": 4
+      },
+      {
+        "name": "P.Delay",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "F.Back",
+        "algId": 3,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Sync",
+        "algId": 4,
+        "defaultValue": 0,
+        "widgetType": 1
+      }
+    ]
+  },
+  "109": {
+    "name": "Phaser",
+    "descriptionEn": "Based on the MXR\u00ae Phase 90* (M101).",
+    "alg": [
+      {
+        "name": "Rate",
+        "algId": 0,
+        "defaultValue": 0.5,
+        "min": 0.1,
+        "max": 10,
+        "step": 0.1,
+        "unit": "Hz",
+        "widgetType": 0,
+        "syncToggleAlgId": 1
+      },
+      {
+        "name": "Sync",
+        "algId": 1,
+        "defaultValue": 0,
+        "widgetType": 1
+      }
+    ]
+  },
+  "110": {
+    "name": "Vibe",
+    "descriptionEn": "Based on the Voodoo Lab\u00ae Micro Vibe*.",
+    "alg": [
+      {
+        "name": "Depth",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Rate",
+        "algId": 1,
+        "defaultValue": 0.5,
+        "min": 0.1,
+        "max": 10,
+        "step": 0.1,
+        "unit": "Hz",
+        "widgetType": 0,
+        "syncToggleAlgId": 2
+      },
+      {
+        "name": "Sync",
+        "algId": 2,
+        "defaultValue": 0,
+        "widgetType": 1
+      }
+    ]
+  },
+  "111": {
+    "name": "Vibrato",
+    "descriptionEn": "Based on the Boss\u00ae VB-2 Vibrato*.",
+    "alg": [
+      {
+        "name": "Depth",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Rate",
+        "algId": 1,
+        "defaultValue": 0.5,
+        "min": 0.1,
+        "max": 10,
+        "step": 0.1,
+        "unit": "Hz",
+        "widgetType": 0,
+        "syncToggleAlgId": 2
+      },
+      {
+        "name": "Sync",
+        "algId": 2,
+        "defaultValue": 0,
+        "widgetType": 1
+      }
+    ]
+  },
+  "112": {
+    "name": "Tremolo",
+    "descriptionEn": "Based on the Demeter\u00ae TRM-1 Tremulator*.",
+    "alg": [
+      {
+        "name": "Depth",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Rate",
+        "algId": 1,
+        "defaultValue": 0.5,
+        "min": 0.1,
+        "max": 10,
+        "step": 0.1,
+        "unit": "Hz",
+        "widgetType": 0,
+        "syncToggleAlgId": 2
+      },
+      {
+        "name": "Sync",
+        "algId": 2,
+        "defaultValue": 0,
+        "widgetType": 1
+      }
+    ]
+  },
+  "113": {
+    "name": "Sine Trem",
+    "descriptionEn": "Sine-wave tremolo with a wide rate and depth range.",
+    "alg": [
+      {
+        "name": "Depth",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Rate",
+        "algId": 1,
+        "defaultValue": 0.5,
+        "min": 0.1,
+        "max": 10,
+        "step": 0.1,
+        "unit": "Hz",
+        "widgetType": 0,
+        "syncToggleAlgId": 3
+      },
+      {
+        "name": "Vol",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Sync",
+        "algId": 3,
+        "defaultValue": 0,
+        "widgetType": 1
+      }
+    ]
+  },
+  "114": {
+    "name": "Bias Trem",
+    "descriptionEn": "Bias-modulated tremolo with a wide rate and depth range.",
+    "alg": [
+      {
+        "name": "Depth",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Rate",
+        "algId": 1,
+        "defaultValue": 0.5,
+        "min": 0.1,
+        "max": 10,
+        "step": 0.1,
+        "unit": "Hz",
+        "widgetType": 0,
+        "syncToggleAlgId": 3
+      },
+      {
+        "name": "Vol",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Sync",
+        "algId": 3,
+        "defaultValue": 0,
+        "widgetType": 1
+      },
+      {
+        "name": "Bias",
+        "algId": 4,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "115": {
+    "name": "AC G",
+    "descriptionEn": "Electric-to-acoustic guitar simulator.",
+    "alg": [
+      {
+        "name": "Body",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Top",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Mode",
+        "algId": 3,
+        "defaultValue": 2,
+        "options": [
+          "Standard",
+          "Jumbo",
+          "Enhanced",
+          "Piezo"
+        ],
+        "widgetType": 2
+      }
+    ]
+  },
+  "116": {
+    "name": "Octave",
+    "descriptionEn": "Polyphonic octave with sub and upper voices.",
+    "alg": [
+      {
+        "name": "Low",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "High",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Dry",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "117": {
+    "name": "Pitch",
+    "descriptionEn": "Polyphonic pitch-shifter and harmonizer.",
+    "alg": [
+      {
+        "name": "High",
+        "algId": 0,
+        "defaultValue": 12,
+        "min": 0,
+        "max": 24,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Low Pitch",
+        "algId": 1,
+        "defaultValue": -12,
+        "min": -24,
+        "max": 0,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Dry",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "H-Vol",
+        "algId": 3,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "L-Vol",
+        "algId": 4,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "118": {
+    "name": "Detune",
+    "descriptionEn": "Light detune that thickens the tone like a chorus.",
+    "alg": [
+      {
+        "name": "Detune",
+        "algId": 0,
+        "defaultValue": -25,
+        "min": -50,
+        "max": 50,
+        "unit": "cents",
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Wet",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Dry",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "201": {
+    "name": "Scream",
+    "descriptionEn": "Based on the Ibanez\u00ae TS-808 Tube Screamer\u00ae*.",
+    "alg": [
+      {
+        "name": "Gain",
+        "algId": 0,
+        "defaultValue": 40,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Tone",
+        "algId": 1,
+        "defaultValue": 70,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "202": {
+    "name": "Butter OD",
+    "descriptionEn": "Smooth 2-knob 'yellow box' overdrive.",
+    "alg": [
+      {
+        "name": "Gain",
+        "algId": 0,
+        "defaultValue": 40,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "203": {
+    "name": "JP Dist",
+    "descriptionEn": "Punchy orange-box 3-knob distortion.",
+    "alg": [
+      {
+        "name": "Gain",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Tone",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "204": {
+    "name": "Shark",
+    "descriptionEn": "Based on the MI Audio\u00ae Crunch Box\u00ae*.",
+    "alg": [
+      {
+        "name": "Gain",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Tone",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "205": {
+    "name": "Dark Mouse",
+    "descriptionEn": "Based on the ProCo\u00ae RAT\u2122* distortion.",
+    "alg": [
+      {
+        "name": "Gain",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Filter",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "206": {
+    "name": "Grey Fuzz",
+    "descriptionEn": "Based on the Sola Sound\u00ae Tone Bender Mk II\u00ae* fuzz.",
+    "alg": [
+      {
+        "name": "Fuzz",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "207": {
+    "name": "Red Fuzz",
+    "descriptionEn": "Based on the Dallas-Arbiter\u00ae Fuzz Face\u00ae* fuzz.",
+    "alg": [
+      {
+        "name": "Fuzz",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "208": {
+    "name": "Bass Drive",
+    "descriptionEn": "Overdrive voiced for bass.",
+    "alg": [
+      {
+        "name": "Gain",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Blend",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Bass",
+        "algId": 3,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Treble",
+        "algId": 4,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "301": {
+    "name": "TWD Deluxe",
+    "descriptionEn": "Based on Fender\u00ae Tweed Deluxe*.",
+    "alg": [
+      {
+        "name": "Gain",
+        "algId": 0,
+        "defaultValue": 30,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Tone",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "302": {
+    "name": "B-Man N",
+    "descriptionEn": "Based on Fender\u00ae '59 Bassman\u00ae* (normal channel).",
+    "alg": [
+      {
+        "name": "Gain",
+        "algId": 0,
+        "defaultValue": 30,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Pres",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Bass",
+        "algId": 3,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Middle",
+        "algId": 4,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Treble",
+        "algId": 5,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "303": {
+    "name": "Dark Twin",
+    "descriptionEn": "Based on Fender\u00ae '65 Twin Reverb\u00ae*.",
+    "alg": [
+      {
+        "name": "Gain",
+        "algId": 0,
+        "defaultValue": 35,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Bass",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Middle",
+        "algId": 3,
+        "defaultValue": 40,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Treble",
+        "algId": 4,
+        "defaultValue": 60,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Bright",
+        "algId": 5,
+        "defaultValue": 1,
+        "widgetType": 1
+      }
+    ]
+  },
+  "304": {
+    "name": "Voks 30N",
+    "descriptionEn": "Based on VOX\u00ae AC30HW* (normal channel).",
+    "alg": [
+      {
+        "name": "Gain",
+        "algId": 0,
+        "defaultValue": 30,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Tone Cut",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Bright",
+        "algId": 3,
+        "defaultValue": 0,
+        "widgetType": 1
+      }
+    ]
+  },
+  "305": {
+    "name": "Jazz 120",
+    "descriptionEn": "Based on Roland\u00ae Jazz Chorus* (JC-120).",
+    "alg": [
+      {
+        "name": "Vol",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Bass",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Middle",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Treble",
+        "algId": 3,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Bright",
+        "algId": 4,
+        "defaultValue": 0,
+        "widgetType": 1
+      }
+    ]
+  },
+  "306": {
+    "name": "Brit 45",
+    "descriptionEn": "Based on Marshall\u00ae JTM45* (normal channel).",
+    "alg": [
+      {
+        "name": "Gain",
+        "algId": 0,
+        "defaultValue": 25,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Pres",
+        "algId": 1,
+        "defaultValue": 65,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Bass",
+        "algId": 3,
+        "defaultValue": 45,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Middle",
+        "algId": 4,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Treble",
+        "algId": 5,
+        "defaultValue": 65,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "307": {
+    "name": "Brit 50JP",
+    "descriptionEn": "Based on Marshall\u00ae JTM50* (jumped channels).",
+    "alg": [
+      {
+        "name": "Gain 1",
+        "algId": 0,
+        "defaultValue": 40,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Pres",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Bass",
+        "algId": 3,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Middle",
+        "algId": 4,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Treble",
+        "algId": 5,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Gain 2",
+        "algId": 6,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "308": {
+    "name": "Brit 800",
+    "descriptionEn": "Based on Marshall\u00ae JCM800*.",
+    "alg": [
+      {
+        "name": "Gain",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Pres",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Bass",
+        "algId": 3,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Middle",
+        "algId": 4,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Treble",
+        "algId": 5,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "309": {
+    "name": "B-Man B",
+    "descriptionEn": "Based on Fender\u00ae '59 Bassman\u00ae* (bright channel).",
+    "alg": [
+      {
+        "name": "Gain",
+        "algId": 0,
+        "defaultValue": 35,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Pres",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Bass",
+        "algId": 3,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Middle",
+        "algId": 4,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Treble",
+        "algId": 5,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "310": {
+    "name": "Voks 30TB",
+    "descriptionEn": "Based on VOX\u00ae AC30HW* (Top Boost channel).",
+    "alg": [
+      {
+        "name": "Gain",
+        "algId": 0,
+        "defaultValue": 30,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Tone Cut",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Bass",
+        "algId": 3,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Treble",
+        "algId": 4,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Char",
+        "algId": 5,
+        "defaultValue": 0,
+        "options": [
+          "Cool",
+          "Hot"
+        ],
+        "widgetType": 2
+      }
+    ]
+  },
+  "311": {
+    "name": "Sol 100 OD",
+    "descriptionEn": "Based on Soldano\u00ae SLO-100* (crunch tone).",
+    "alg": [
+      {
+        "name": "Gain",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Pres",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Bass",
+        "algId": 3,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Middle",
+        "algId": 4,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Treble",
+        "algId": 5,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "312": {
+    "name": "Dizzy VH",
+    "descriptionEn": "Based on Diezel\u00ae VH4* (channel 3).",
+    "alg": [
+      {
+        "name": "Gain",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Pres",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Bass",
+        "algId": 3,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Middle",
+        "algId": 4,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Treble",
+        "algId": 5,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "313": {
+    "name": "Eng 120",
+    "descriptionEn": "Based on ENGL\u00ae Savage 120*.",
+    "alg": [
+      {
+        "name": "Gain",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Pres",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Bass",
+        "algId": 3,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Middle",
+        "algId": 4,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Treble",
+        "algId": 5,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "314": {
+    "name": "Halen 51",
+    "descriptionEn": "Based on Peavey\u00ae 5150\u00ae* (lead channel).",
+    "alg": [
+      {
+        "name": "Gain",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Bass",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Middle",
+        "algId": 3,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Treble",
+        "algId": 4,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Pres",
+        "algId": 6,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "315": {
+    "name": "Sol 100 LD",
+    "descriptionEn": "Based on Soldano\u00ae SLO-100* (overdrive channel).",
+    "alg": [
+      {
+        "name": "Gain",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Pres",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Bass",
+        "algId": 3,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Middle",
+        "algId": 4,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Treble",
+        "algId": 5,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "316": {
+    "name": "Calif DualV",
+    "descriptionEn": "Based on Mesa/Boogie\u00ae Dual Rectifier\u00ae* (vintage mode).",
+    "alg": [
+      {
+        "name": "Gain",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Pres",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Bass",
+        "algId": 3,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Middle",
+        "algId": 4,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Treble",
+        "algId": 5,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "317": {
+    "name": "Calif DualM",
+    "descriptionEn": "Based on Mesa/Boogie\u00ae Dual Rectifier\u00ae* (modern mode).",
+    "alg": [
+      {
+        "name": "Gain",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Pres",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Bass",
+        "algId": 3,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Middle",
+        "algId": 4,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Treble",
+        "algId": 5,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "318": {
+    "name": "Eng Power",
+    "descriptionEn": "Based on ENGL\u00ae Powerball II* (lead channel).",
+    "alg": [
+      {
+        "name": "Gain",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Pres",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Bass",
+        "algId": 3,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Middle",
+        "algId": 4,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Treble",
+        "algId": 5,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "319": {
+    "name": "Flyman B1+",
+    "descriptionEn": "Based on Friedman\u00ae BE-100* ('Brown Eye', HBE channel).",
+    "alg": [
+      {
+        "name": "Gain",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Pres",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Bass",
+        "algId": 3,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Middle",
+        "algId": 4,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Treble",
+        "algId": 5,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "320": {
+    "name": "Bog XT V",
+    "descriptionEn": "Based on Bogner\u00ae Ecstasy* (red / high-gain channel).",
+    "alg": [
+      {
+        "name": "Gain",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Pres",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Bass",
+        "algId": 3,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Middle",
+        "algId": 4,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Treble",
+        "algId": 5,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "321": {
+    "name": "A BassVT",
+    "descriptionEn": "Based on Ampeg\u00ae SVT* bass amp.",
+    "alg": [
+      {
+        "name": "Gain",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Bass",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Middle",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "MidFreq",
+        "algId": 3,
+        "defaultValue": 1,
+        "options": [
+          "220Hz",
+          "450Hz",
+          "800Hz",
+          "1.6kHz",
+          "3kHz"
+        ],
+        "widgetType": 2
+      },
+      {
+        "name": "Treble",
+        "algId": 4,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 5,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "322": {
+    "name": "Voks Bass",
+    "descriptionEn": "Based on VOX\u00ae AC100* bass amp.",
+    "alg": [
+      {
+        "name": "Vol",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Bass",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Treble",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "401": {
+    "name": "TWD 1x8",
+    "descriptionEn": "1x8\" cabinet voiced after the Fender\u00ae Champ*.",
+    "alg": [
+      {
+        "name": "Vol",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "402": {
+    "name": "TWD-P 1x10",
+    "descriptionEn": "1x10\" cabinet voiced after the Fender\u00ae Princeton*.",
+    "alg": [
+      {
+        "name": "Vol",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "403": {
+    "name": "Viblux 1x12",
+    "descriptionEn": "1x12\" cabinet voiced after the Fender\u00ae Vibrolux*.",
+    "alg": [
+      {
+        "name": "Vol",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "404": {
+    "name": "Voks 1x12",
+    "descriptionEn": "1x12\" cabinet voiced after the VOX\u00ae AC15*.",
+    "alg": [
+      {
+        "name": "Vol",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "405": {
+    "name": "TWD 2x12",
+    "descriptionEn": "2x12\" cabinet voiced after a custom Fender\u00ae Tweed*.",
+    "alg": [
+      {
+        "name": "Vol",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "406": {
+    "name": "Double 2x12",
+    "descriptionEn": "2x12\" cabinet voiced after the Fender\u00ae '65 Twin Reverb*.",
+    "alg": [
+      {
+        "name": "Vol",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "407": {
+    "name": "Star 2x12",
+    "descriptionEn": "2x12\" cabinet voiced after the Mesa/Boogie\u00ae Lone Star*.",
+    "alg": [
+      {
+        "name": "Vol",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "408": {
+    "name": "Jazz 2x12",
+    "descriptionEn": "2x12\" cabinet voiced after the Roland\u00ae Jazz Chorus*.",
+    "alg": [
+      {
+        "name": "Vol",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "409": {
+    "name": "BritGN 2x12",
+    "descriptionEn": "2x12\" Marshall\u00ae-style cabinet with Celestion\u00ae Greenback\u00ae* speakers.",
+    "alg": [
+      {
+        "name": "Vol",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "410": {
+    "name": "BritGN 4x12",
+    "descriptionEn": "4x12\" Marshall\u00ae-style cabinet with Celestion\u00ae Greenback\u00ae* speakers.",
+    "alg": [
+      {
+        "name": "Vol",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "411": {
+    "name": "Bog 4x12",
+    "descriptionEn": "4x12\" cabinet voiced after a Bogner\u00ae* cab.",
+    "alg": [
+      {
+        "name": "Vol",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "412": {
+    "name": "Dizzy 4x12",
+    "descriptionEn": "4x12\" cabinet voiced after a Diezel\u00ae* cab.",
+    "alg": [
+      {
+        "name": "Vol",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "413": {
+    "name": "Halen 4x12",
+    "descriptionEn": "4x12\" cabinet voiced after the Peavey\u00ae 6505*.",
+    "alg": [
+      {
+        "name": "Vol",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "414": {
+    "name": "Sol 4x12",
+    "descriptionEn": "4x12\" cabinet voiced after a Soldano\u00ae* cab.",
+    "alg": [
+      {
+        "name": "Vol",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "415": {
+    "name": "Dual 4x12",
+    "descriptionEn": "4x12\" cabinet voiced after the Mesa/Boogie\u00ae Rectifier\u00ae*.",
+    "alg": [
+      {
+        "name": "Vol",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "416": {
+    "name": "User IR 1",
+    "descriptionEn": "User-loaded cabinet impulse response.",
+    "alg": [
+      {
+        "name": "Vol",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "417": {
+    "name": "User IR 2",
+    "descriptionEn": "User-loaded cabinet impulse response.",
+    "alg": [
+      {
+        "name": "Vol",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "418": {
+    "name": "User IR 3",
+    "descriptionEn": "User-loaded cabinet impulse response.",
+    "alg": [
+      {
+        "name": "Vol",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "419": {
+    "name": "User IR 4",
+    "descriptionEn": "User-loaded cabinet impulse response.",
+    "alg": [
+      {
+        "name": "Vol",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "420": {
+    "name": "User IR 5",
+    "descriptionEn": "User-loaded cabinet impulse response.",
+    "alg": [
+      {
+        "name": "Vol",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "501": {
+    "name": "GT EQ 1",
+    "descriptionEn": "5-band graphic EQ for guitar.",
+    "alg": [
+      {
+        "name": "125Hz",
+        "algId": 0,
+        "defaultValue": 0,
+        "min": -50,
+        "max": 50,
+        "step": 1,
+        "widgetType": 3
+      },
+      {
+        "name": "400Hz",
+        "algId": 1,
+        "defaultValue": 0,
+        "min": -50,
+        "max": 50,
+        "step": 1,
+        "widgetType": 3
+      },
+      {
+        "name": "800Hz",
+        "algId": 2,
+        "defaultValue": 0,
+        "min": -50,
+        "max": 50,
+        "step": 1,
+        "widgetType": 3
+      },
+      {
+        "name": "1.6kHz",
+        "algId": 3,
+        "defaultValue": 0,
+        "min": -50,
+        "max": 50,
+        "step": 1,
+        "widgetType": 3
+      },
+      {
+        "name": "4kHz",
+        "algId": 4,
+        "defaultValue": 0,
+        "min": -50,
+        "max": 50,
+        "step": 1,
+        "widgetType": 3
+      },
+      {
+        "name": "Vol",
+        "algId": 5,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "502": {
+    "name": "GT EQ 2",
+    "descriptionEn": "5-band graphic EQ for guitar.",
+    "alg": [
+      {
+        "name": "100Hz",
+        "algId": 0,
+        "defaultValue": 0,
+        "min": -50,
+        "max": 50,
+        "step": 1,
+        "widgetType": 3
+      },
+      {
+        "name": "500Hz",
+        "algId": 1,
+        "defaultValue": 0,
+        "min": -50,
+        "max": 50,
+        "step": 1,
+        "widgetType": 3
+      },
+      {
+        "name": "1kHz",
+        "algId": 2,
+        "defaultValue": 0,
+        "min": -50,
+        "max": 50,
+        "step": 1,
+        "widgetType": 3
+      },
+      {
+        "name": "3kHz",
+        "algId": 3,
+        "defaultValue": 0,
+        "min": -50,
+        "max": 50,
+        "step": 1,
+        "widgetType": 3
+      },
+      {
+        "name": "6kHz",
+        "algId": 4,
+        "defaultValue": 0,
+        "min": -50,
+        "max": 50,
+        "step": 1,
+        "widgetType": 3
+      },
+      {
+        "name": "Vol",
+        "algId": 5,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "503": {
+    "name": "Bass EQ",
+    "descriptionEn": "5-band graphic EQ for bass.",
+    "alg": [
+      {
+        "name": "50Hz",
+        "algId": 0,
+        "defaultValue": 0,
+        "min": -50,
+        "max": 50,
+        "step": 1,
+        "widgetType": 3
+      },
+      {
+        "name": "120Hz",
+        "algId": 1,
+        "defaultValue": 0,
+        "min": -50,
+        "max": 50,
+        "step": 1,
+        "widgetType": 3
+      },
+      {
+        "name": "400Hz",
+        "algId": 2,
+        "defaultValue": 0,
+        "min": -50,
+        "max": 50,
+        "step": 1,
+        "widgetType": 3
+      },
+      {
+        "name": "800Hz",
+        "algId": 3,
+        "defaultValue": 0,
+        "min": -50,
+        "max": 50,
+        "step": 1,
+        "widgetType": 3
+      },
+      {
+        "name": "4.5kHz",
+        "algId": 4,
+        "defaultValue": 0,
+        "min": -50,
+        "max": 50,
+        "step": 1,
+        "widgetType": 3
+      },
+      {
+        "name": "Vol",
+        "algId": 5,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "701": {
+    "name": "Pure",
+    "descriptionEn": "Clean digital delay with clear, uncolored repeats.",
+    "alg": [
+      {
+        "name": "Mix",
+        "algId": 0,
+        "defaultValue": 20,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Time",
+        "algId": 1,
+        "defaultValue": 500,
+        "min": 20,
+        "max": 1000,
+        "unit": "ms",
+        "step": 1,
+        "widgetType": 0,
+        "syncToggleAlgId": 3
+      },
+      {
+        "name": "F.Back",
+        "algId": 2,
+        "defaultValue": 30,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Sync",
+        "algId": 3,
+        "defaultValue": 0,
+        "widgetType": 1
+      },
+      {
+        "name": "Trail",
+        "algId": 4,
+        "defaultValue": 0,
+        "widgetType": 1
+      }
+    ]
+  },
+  "702": {
+    "name": "Slap",
+    "descriptionEn": "Short slapback echo for vintage bounce.",
+    "alg": [
+      {
+        "name": "Mix",
+        "algId": 0,
+        "defaultValue": 20,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Time",
+        "algId": 1,
+        "defaultValue": 150,
+        "min": 20,
+        "max": 300,
+        "unit": "ms",
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "F.Back",
+        "algId": 2,
+        "defaultValue": 30,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Trail",
+        "algId": 4,
+        "defaultValue": 0,
+        "widgetType": 1
+      }
+    ]
+  },
+  "703": {
+    "name": "Warm",
+    "descriptionEn": "Warm analog-voiced delay with darkening repeats.",
+    "alg": [
+      {
+        "name": "Mix",
+        "algId": 0,
+        "defaultValue": 20,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Time",
+        "algId": 1,
+        "defaultValue": 500,
+        "min": 20,
+        "max": 1000,
+        "unit": "ms",
+        "step": 1,
+        "widgetType": 0,
+        "syncToggleAlgId": 3
+      },
+      {
+        "name": "F.Back",
+        "algId": 2,
+        "defaultValue": 30,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Sync",
+        "algId": 3,
+        "defaultValue": 0,
+        "widgetType": 1
+      },
+      {
+        "name": "Trail",
+        "algId": 4,
+        "defaultValue": 0,
+        "widgetType": 1
+      }
+    ]
+  },
+  "704": {
+    "name": "Mag",
+    "descriptionEn": "Solid-state tape-echo emulation.",
+    "alg": [
+      {
+        "name": "Mix",
+        "algId": 0,
+        "defaultValue": 20,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Time",
+        "algId": 1,
+        "defaultValue": 500,
+        "min": 20,
+        "max": 1000,
+        "unit": "ms",
+        "step": 1,
+        "widgetType": 0,
+        "syncToggleAlgId": 3
+      },
+      {
+        "name": "F.Back",
+        "algId": 2,
+        "defaultValue": 30,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Sync",
+        "algId": 3,
+        "defaultValue": 0,
+        "widgetType": 1
+      },
+      {
+        "name": "Trail",
+        "algId": 4,
+        "defaultValue": 0,
+        "widgetType": 1
+      }
+    ]
+  },
+  "705": {
+    "name": "Tube",
+    "descriptionEn": "Tube tape-echo emulation with saturated repeats.",
+    "alg": [
+      {
+        "name": "Mix",
+        "algId": 0,
+        "defaultValue": 20,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Time",
+        "algId": 1,
+        "defaultValue": 500,
+        "min": 20,
+        "max": 1000,
+        "unit": "ms",
+        "step": 1,
+        "widgetType": 0,
+        "syncToggleAlgId": 3
+      },
+      {
+        "name": "F.Back",
+        "algId": 2,
+        "defaultValue": 30,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Sync",
+        "algId": 3,
+        "defaultValue": 0,
+        "widgetType": 1
+      },
+      {
+        "name": "Trail",
+        "algId": 4,
+        "defaultValue": 0,
+        "widgetType": 1
+      }
+    ]
+  },
+  "706": {
+    "name": "Reverse",
+    "descriptionEn": "Reverse delay for backwards, swelling trails.",
+    "alg": [
+      {
+        "name": "Mix",
+        "algId": 0,
+        "defaultValue": 20,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Time",
+        "algId": 1,
+        "defaultValue": 500,
+        "min": 20,
+        "max": 500,
+        "unit": "ms",
+        "step": 1,
+        "widgetType": 0,
+        "syncToggleAlgId": 3
+      },
+      {
+        "name": "F.Back",
+        "algId": 2,
+        "defaultValue": 30,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Sync",
+        "algId": 3,
+        "defaultValue": 0,
+        "widgetType": 1
+      },
+      {
+        "name": "Trail",
+        "algId": 4,
+        "defaultValue": 0,
+        "widgetType": 1
+      }
+    ]
+  },
+  "707": {
+    "name": "Analog",
+    "descriptionEn": "Reproduces the sound of a vintage 1980's rack-mount delay machine. Based on the Roland\u00ae SDE-3000*.",
+    "alg": [
+      {
+        "name": "Mix",
+        "algId": 0,
+        "defaultValue": 20,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Time",
+        "algId": 1,
+        "defaultValue": 500,
+        "min": 20,
+        "max": 1000,
+        "unit": "ms",
+        "step": 1,
+        "widgetType": 0,
+        "syncToggleAlgId": 3
+      },
+      {
+        "name": "F.Back",
+        "algId": 2,
+        "defaultValue": 30,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Sync",
+        "algId": 3,
+        "defaultValue": 0,
+        "widgetType": 1
+      },
+      {
+        "name": "Trail",
+        "algId": 4,
+        "defaultValue": 0,
+        "widgetType": 1
+      }
+    ]
+  },
+  "708": {
+    "name": "Sweep",
+    "descriptionEn": "Delay with a filter sweeping across the repeats.",
+    "alg": [
+      {
+        "name": "Mix",
+        "algId": 0,
+        "defaultValue": 20,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Time",
+        "algId": 1,
+        "defaultValue": 500,
+        "min": 20,
+        "max": 1000,
+        "unit": "ms",
+        "step": 1,
+        "widgetType": 0,
+        "syncToggleAlgId": 6
+      },
+      {
+        "name": "F.Back",
+        "algId": 2,
+        "defaultValue": 30,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "S-Depth",
+        "algId": 3,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "S-Rate",
+        "algId": 4,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Trail",
+        "algId": 5,
+        "defaultValue": 0,
+        "widgetType": 1
+      },
+      {
+        "name": "Sync",
+        "algId": 6,
+        "defaultValue": 0,
+        "widgetType": 1
+      }
+    ]
+  },
+  "709": {
+    "name": "Ping Pong",
+    "descriptionEn": "Stereo delay that bounces repeats left to right.",
+    "alg": [
+      {
+        "name": "Mix",
+        "algId": 0,
+        "defaultValue": 20,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Time",
+        "algId": 1,
+        "defaultValue": 500,
+        "min": 20,
+        "max": 500,
+        "unit": "ms",
+        "step": 1,
+        "widgetType": 0,
+        "syncToggleAlgId": 3
+      },
+      {
+        "name": "F.Back",
+        "algId": 2,
+        "defaultValue": 30,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Sync",
+        "algId": 3,
+        "defaultValue": 0,
+        "widgetType": 1
+      },
+      {
+        "name": "Trail",
+        "algId": 4,
+        "defaultValue": 0,
+        "widgetType": 1
+      }
+    ]
+  },
+  "801": {
+    "name": "Air",
+    "descriptionEn": "Airy ambience with an open, natural tail.",
+    "alg": [
+      {
+        "name": "Mix",
+        "algId": 0,
+        "defaultValue": 30,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Decay",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Damp",
+        "algId": 4,
+        "defaultValue": 0,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "802": {
+    "name": "Room",
+    "descriptionEn": "Tight room reverb with a short decay.",
+    "alg": [
+      {
+        "name": "Mix",
+        "algId": 0,
+        "defaultValue": 30,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Decay",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "803": {
+    "name": "Hall",
+    "descriptionEn": "Concert-hall reverb with a long, smooth tail.",
+    "alg": [
+      {
+        "name": "Mix",
+        "algId": 0,
+        "defaultValue": 30,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Decay",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "804": {
+    "name": "Church",
+    "descriptionEn": "Cathedral reverb with a long, resonant decay.",
+    "alg": [
+      {
+        "name": "Mix",
+        "algId": 0,
+        "defaultValue": 30,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Decay",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "805": {
+    "name": "Plate 1",
+    "descriptionEn": "Dense, bright studio plate reverb.",
+    "alg": [
+      {
+        "name": "Mix",
+        "algId": 0,
+        "defaultValue": 30,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Decay",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "806": {
+    "name": "Plate 2",
+    "descriptionEn": "Warmer, grainier vintage plate reverb.",
+    "alg": [
+      {
+        "name": "Mix",
+        "algId": 0,
+        "defaultValue": 30,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Decay",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Damp",
+        "algId": 4,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "807": {
+    "name": "Spring",
+    "descriptionEn": "Amp-style spring reverb with a lively drip.",
+    "alg": [
+      {
+        "name": "Mix",
+        "algId": 0,
+        "defaultValue": 30,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Decay",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "808": {
+    "name": "Light",
+    "descriptionEn": "Bright, lush reverb with a shimmering top.",
+    "alg": [
+      {
+        "name": "Mix",
+        "algId": 0,
+        "defaultValue": 30,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Decay",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "809": {
+    "name": "Ocean",
+    "descriptionEn": "Huge, deep reverb with a cavernous decay.",
+    "alg": [
+      {
+        "name": "Mix",
+        "algId": 0,
+        "defaultValue": 30,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Decay",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "810": {
+    "name": "Dream",
+    "descriptionEn": "Modulated reverb with a lush, swirling tail.",
+    "alg": [
+      {
+        "name": "Mix",
+        "algId": 0,
+        "defaultValue": 30,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Decay",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Damp",
+        "algId": 4,
+        "defaultValue": 0,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Mod",
+        "algId": 5,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "901": {
+    "name": "User Profile 1",
+    "descriptionEn": "Your own captured amp profile with a 3-band EQ.",
+    "alg": [
+      {
+        "name": "Gain",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Bass",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Middle",
+        "algId": 3,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Treble",
+        "algId": 4,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "902": {
+    "name": "User Profile 2",
+    "descriptionEn": "Your own captured amp profile with a 3-band EQ.",
+    "alg": [
+      {
+        "name": "Gain",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Bass",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Middle",
+        "algId": 3,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Treble",
+        "algId": 4,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "903": {
+    "name": "User Profile 3",
+    "descriptionEn": "Your own captured amp profile with a 3-band EQ.",
+    "alg": [
+      {
+        "name": "Gain",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Bass",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Middle",
+        "algId": 3,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Treble",
+        "algId": 4,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "904": {
+    "name": "User Profile 4",
+    "descriptionEn": "Your own captured amp profile with a 3-band EQ.",
+    "alg": [
+      {
+        "name": "Gain",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Bass",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Middle",
+        "algId": 3,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Treble",
+        "algId": 4,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "905": {
+    "name": "User Profile 5",
+    "descriptionEn": "Your own captured amp profile with a 3-band EQ.",
+    "alg": [
+      {
+        "name": "Gain",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Bass",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Middle",
+        "algId": 3,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Treble",
+        "algId": 4,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "119": {
+    "name": "Fullchor",
+    "descriptionEn": "Based on the Boss\u00ae CE-1 Chorus Ensemble*.",
+    "alg": [
+      {
+        "name": "Depth",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Rate",
+        "algId": 1,
+        "defaultValue": 0.5,
+        "min": 0.1,
+        "max": 10,
+        "step": 0.1,
+        "unit": "Hz",
+        "widgetType": 0,
+        "syncToggleAlgId": 2
+      },
+      {
+        "name": "Sync",
+        "algId": 2,
+        "defaultValue": 0,
+        "widgetType": 1
+      }
+    ]
+  },
+  "710": {
+    "name": "Flash",
+    "descriptionEn": "Fast, bright delay voicing.",
+    "alg": [
+      {
+        "name": "Mix",
+        "algId": 0,
+        "defaultValue": 20,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Time",
+        "algId": 1,
+        "defaultValue": 500,
+        "min": 20,
+        "max": 1000,
+        "step": 1,
+        "unit": "ms",
+        "widgetType": 0,
+        "syncToggleAlgId": 3
+      },
+      {
+        "name": "F.Back",
+        "algId": 2,
+        "defaultValue": 30,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Sync",
+        "algId": 3,
+        "defaultValue": 0,
+        "widgetType": 1
+      },
+      {
+        "name": "Trail",
+        "algId": 4,
+        "defaultValue": 0,
+        "widgetType": 1
+      }
+    ]
+  },
+  "323": {
+    "name": "Doctor CL",
+    "descriptionEn": "Based on a Dr. Z\u00ae amp* (clean channel).",
+    "alg": [
+      {
+        "name": "Gain",
+        "algId": 0,
+        "defaultValue": 30,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Pres",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Bass",
+        "algId": 3,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Middle",
+        "algId": 4,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Treble",
+        "algId": 5,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "324": {
+    "name": "Flyman B1",
+    "descriptionEn": "Based on Friedman\u00ae BE-100* ('Brown Eye', BE channel).",
+    "alg": [
+      {
+        "name": "Gain",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Pres",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Bass",
+        "algId": 3,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Middle",
+        "algId": 4,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Treble",
+        "algId": 5,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "120": {
+    "name": "Phaser ST",
+    "descriptionEn": "Based on the MXR\u00ae Phase 90* (stereo).",
+    "alg": [
+      {
+        "name": "Depth",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Rate",
+        "algId": 0,
+        "defaultValue": 0.5,
+        "min": 0.1,
+        "max": 10,
+        "step": 0.1,
+        "unit": "Hz",
+        "widgetType": 0,
+        "syncToggleAlgId": 2
+      },
+      {
+        "name": "Sync",
+        "algId": 2,
+        "defaultValue": 0,
+        "widgetType": 1
+      }
+    ]
+  },
+  "711": {
+    "name": "Damage",
+    "descriptionEn": "Lo-fi, broken-up delay voicing.",
+    "alg": [
+      {
+        "name": "Mix",
+        "algId": 0,
+        "defaultValue": 20,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Time",
+        "algId": 1,
+        "defaultValue": 500,
+        "min": 20,
+        "max": 1000,
+        "step": 1,
+        "unit": "ms",
+        "widgetType": 0,
+        "syncToggleAlgId": 3
+      },
+      {
+        "name": "F.Back",
+        "algId": 2,
+        "defaultValue": 30,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Sync",
+        "algId": 3,
+        "defaultValue": 0,
+        "widgetType": 1
+      },
+      {
+        "name": "Trail",
+        "algId": 4,
+        "defaultValue": 0,
+        "widgetType": 1
+      }
+    ]
+  },
+  "325": {
+    "name": "Calif IIC+",
+    "descriptionEn": "Based on Mesa/Boogie\u00ae Mark IIC+*.",
+    "alg": [
+      {
+        "name": "Gain",
+        "algId": 0,
+        "defaultValue": 30,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Pres",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Bass",
+        "algId": 3,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Middle",
+        "algId": 4,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Treble",
+        "algId": 5,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "326": {
+    "name": "Supero 2 OD",
+    "descriptionEn": "Based on the Boss\u00ae SD-2 Dual OverDrive*. Two cascaded gain stages, each with its own tone control.",
+    "alg": [
+      {
+        "name": "Gain1",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Tone1",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Gain2",
+        "algId": 3,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Tone2",
+        "algId": 4,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 5,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "327": {
+    "name": "Bog SV CL",
+    "descriptionEn": "Based on Bogner\u00ae Shiva* (clean channel).",
+    "alg": [
+      {
+        "name": "Gain",
+        "algId": 0,
+        "defaultValue": 30,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Pres",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Bass",
+        "algId": 3,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Middle",
+        "algId": 4,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Treble",
+        "algId": 5,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "328": {
+    "name": "Bog XT M",
+    "descriptionEn": "Based on Bogner\u00ae Ecstasy* (blue / mid-gain channel).",
+    "alg": [
+      {
+        "name": "Gain",
+        "algId": 0,
+        "defaultValue": 30,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Pres",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Bass",
+        "algId": 3,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Middle",
+        "algId": 4,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Treble",
+        "algId": 5,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "329": {
+    "name": "Superb CL",
+    "descriptionEn": "Based on a Supro\u00ae amp* (clean channel).",
+    "alg": [
+      {
+        "name": "Gain",
+        "algId": 0,
+        "defaultValue": 30,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Pres",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Bass",
+        "algId": 3,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Middle",
+        "algId": 4,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Treble",
+        "algId": 5,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "330": {
+    "name": "Brit 900",
+    "descriptionEn": "Based on Marshall\u00ae JCM900*.",
+    "alg": [
+      {
+        "name": "Gain",
+        "algId": 0,
+        "defaultValue": 30,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Pres",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Bass",
+        "algId": 3,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Middle",
+        "algId": 4,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Treble",
+        "algId": 5,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "331": {
+    "name": "Calif Star CL",
+    "descriptionEn": "Based on Mesa/Boogie\u00ae Lone Star* (clean channel).",
+    "alg": [
+      {
+        "name": "Gain",
+        "algId": 0,
+        "defaultValue": 30,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Pres",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Bass",
+        "algId": 3,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Middle",
+        "algId": 4,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Treble",
+        "algId": 5,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "332": {
+    "name": "Dizzy VH+",
+    "descriptionEn": "Based on Diezel\u00ae VH4* (channel 4, high-gain lead).",
+    "alg": [
+      {
+        "name": "Gain",
+        "algId": 0,
+        "defaultValue": 30,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Pres",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Bass",
+        "algId": 3,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Middle",
+        "algId": 4,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Treble",
+        "algId": 5,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "333": {
+    "name": "Calif Bass",
+    "descriptionEn": "Based on Mesa/Boogie\u00ae Bass 400+* bass amp.",
+    "alg": [
+      {
+        "name": "Gain",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Bass",
+        "algId": 3,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Middle",
+        "algId": 4,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Treble",
+        "algId": 5,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "712": {
+    "name": "Flutter",
+    "descriptionEn": "Wobbly tape-flutter delay voicing.",
+    "alg": [
+      {
+        "name": "Mix",
+        "algId": 0,
+        "defaultValue": 20,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Time",
+        "algId": 1,
+        "defaultValue": 500,
+        "min": 20,
+        "max": 1000,
+        "step": 1,
+        "unit": "ms",
+        "widgetType": 0,
+        "syncToggleAlgId": 3
+      },
+      {
+        "name": "F.Back",
+        "algId": 2,
+        "defaultValue": 30,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Sync",
+        "algId": 3,
+        "defaultValue": 0,
+        "widgetType": 1
+      },
+      {
+        "name": "Trail",
+        "algId": 4,
+        "defaultValue": 0,
+        "widgetType": 1
+      }
+    ]
+  },
+  "713": {
+    "name": "Glost",
+    "descriptionEn": "Ghostly ambient delay voicing.",
+    "alg": [
+      {
+        "name": "Mix",
+        "algId": 0,
+        "defaultValue": 20,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Time",
+        "algId": 1,
+        "defaultValue": 500,
+        "min": 20,
+        "max": 1000,
+        "step": 1,
+        "unit": "ms",
+        "widgetType": 0,
+        "syncToggleAlgId": 3
+      },
+      {
+        "name": "F.Back",
+        "algId": 2,
+        "defaultValue": 30,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Sync",
+        "algId": 3,
+        "defaultValue": 0,
+        "widgetType": 1
+      },
+      {
+        "name": "Trail",
+        "algId": 4,
+        "defaultValue": 0,
+        "widgetType": 1
+      }
+    ]
+  },
+  "714": {
+    "name": "Dark",
+    "descriptionEn": "Dark, filtered delay voicing.",
+    "alg": [
+      {
+        "name": "Mix",
+        "algId": 0,
+        "defaultValue": 20,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Time",
+        "algId": 1,
+        "defaultValue": 500,
+        "min": 20,
+        "max": 1000,
+        "step": 1,
+        "unit": "ms",
+        "widgetType": 0,
+        "syncToggleAlgId": 3
+      },
+      {
+        "name": "F.Back",
+        "algId": 2,
+        "defaultValue": 30,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Sync",
+        "algId": 3,
+        "defaultValue": 0,
+        "widgetType": 1
+      },
+      {
+        "name": "Trail",
+        "algId": 4,
+        "defaultValue": 0,
+        "widgetType": 1
+      }
+    ]
+  },
+  "715": {
+    "name": "Shiny",
+    "descriptionEn": "Bright, shimmering delay voicing.",
+    "alg": [
+      {
+        "name": "Mix",
+        "algId": 0,
+        "defaultValue": 20,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Time",
+        "algId": 1,
+        "defaultValue": 500,
+        "min": 20,
+        "max": 1000,
+        "step": 1,
+        "unit": "ms",
+        "widgetType": 0,
+        "syncToggleAlgId": 3
+      },
+      {
+        "name": "F.Back",
+        "algId": 2,
+        "defaultValue": 30,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Sync",
+        "algId": 3,
+        "defaultValue": 0,
+        "widgetType": 1
+      },
+      {
+        "name": "Trail",
+        "algId": 4,
+        "defaultValue": 0,
+        "widgetType": 1
+      }
+    ]
+  },
+  "716": {
+    "name": "Echo",
+    "descriptionEn": "Based on the Maestro\u00ae Echoplex\u00ae EP-3* tape echo.",
+    "alg": [
+      {
+        "name": "Mix",
+        "algId": 0,
+        "defaultValue": 20,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Time",
+        "algId": 1,
+        "defaultValue": 500,
+        "min": 20,
+        "max": 1000,
+        "step": 1,
+        "unit": "ms",
+        "widgetType": 0,
+        "syncToggleAlgId": 3
+      },
+      {
+        "name": "F.Back",
+        "algId": 2,
+        "defaultValue": 30,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Sync",
+        "algId": 3,
+        "defaultValue": 0,
+        "widgetType": 1
+      },
+      {
+        "name": "Trail",
+        "algId": 4,
+        "defaultValue": 0,
+        "widgetType": 1
+      }
+    ]
+  },
+  "421": {
+    "name": "Bass 4x10",
+    "descriptionEn": "Based on an Ampeg\u00ae SVT-410* 4x10\" bass cabinet.",
+    "alg": [
+      {
+        "name": "Vol",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "121": {
+    "name": "Crystal Chorus",
+    "descriptionEn": "Based on the Boss\u00ae CH-1 Super Chorus*.",
+    "alg": [
+      {
+        "name": "Depth",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Rate",
+        "algId": 1,
+        "defaultValue": 0.5,
+        "min": 0.1,
+        "max": 10,
+        "step": 0.1,
+        "unit": "Hz",
+        "widgetType": 0,
+        "syncToggleAlgId": 2
+      },
+      {
+        "name": "Sync",
+        "algId": 2,
+        "defaultValue": 0,
+        "widgetType": 1
+      }
+    ]
+  },
+  "601": {
+    "name": "BBD Phaser",
+    "descriptionEn": "Based on the Electro-Harmonix\u00ae Small Stone\u00ae* phaser.",
+    "alg": [
+      {
+        "name": "Depth",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Rate",
+        "algId": 0,
+        "defaultValue": 0.5,
+        "min": 0.1,
+        "max": 10,
+        "step": 0.1,
+        "unit": "Hz",
+        "widgetType": 0,
+        "syncToggleAlgId": 2
+      },
+      {
+        "name": "Sync",
+        "algId": 2,
+        "defaultValue": 0,
+        "widgetType": 1
+      }
+    ]
+  },
+  "602": {
+    "name": "Lofi Vibrato",
+    "descriptionEn": "Based on the Boss\u00ae VB-2 Vibrato* (lo-fi).",
+    "alg": [
+      {
+        "name": "Depth",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Rate",
+        "algId": 1,
+        "defaultValue": 0.5,
+        "min": 0.1,
+        "max": 10,
+        "step": 0.1,
+        "unit": "Hz",
+        "widgetType": 0,
+        "syncToggleAlgId": 2
+      },
+      {
+        "name": "Sync",
+        "algId": 2,
+        "defaultValue": 0,
+        "widgetType": 1
+      }
+    ]
+  },
+  "603": {
+    "name": "Flanger ST",
+    "descriptionEn": "Based on the Boss\u00ae BF-2 Flanger* (stereo).",
+    "alg": [
+      {
+        "name": "Depth",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Rate",
+        "algId": 1,
+        "defaultValue": 0.5,
+        "min": 0.1,
+        "max": 10,
+        "step": 0.1,
+        "unit": "Hz",
+        "widgetType": 0,
+        "syncToggleAlgId": 5
+      },
+      {
+        "name": "P.Delay",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "F.Back",
+        "algId": 3,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 4,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Sync",
+        "algId": 5,
+        "defaultValue": 0,
+        "widgetType": 1
+      }
+    ]
+  },
+  "334": {
+    "name": "Calif IV LD",
+    "descriptionEn": "Based on Mesa/Boogie\u00ae Mark IV* (lead channel).",
+    "alg": [
+      {
+        "name": "Gain",
+        "algId": 0,
+        "defaultValue": 30,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Pres",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Bass",
+        "algId": 3,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Middle",
+        "algId": 4,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Treble",
+        "algId": 5,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "335": {
+    "name": "Tanger R100",
+    "descriptionEn": "Based on Orange\u00ae Rockerverb 100*.",
+    "alg": [
+      {
+        "name": "Gain",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Bass",
+        "algId": 3,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Middle",
+        "algId": 4,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Treble",
+        "algId": 5,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "336": {
+    "name": "Brit 50",
+    "descriptionEn": "Based on Marshall\u00ae JTM50*.",
+    "alg": [
+      {
+        "name": "Gain",
+        "algId": 0,
+        "defaultValue": 30,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Pres",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Bass",
+        "algId": 3,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Middle",
+        "algId": 4,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Treble",
+        "algId": 5,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "337": {
+    "name": "Superb OD",
+    "descriptionEn": "Based on a Supro\u00ae amp* (overdrive channel).",
+    "alg": [
+      {
+        "name": "Gain",
+        "algId": 0,
+        "defaultValue": 30,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Pres",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Bass",
+        "algId": 3,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Middle",
+        "algId": 4,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Treble",
+        "algId": 5,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "338": {
+    "name": "Doctor OD",
+    "descriptionEn": "Based on a Dr. Z\u00ae amp* (overdrive channel).",
+    "alg": [
+      {
+        "name": "Gain",
+        "algId": 0,
+        "defaultValue": 30,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Pres",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Bass",
+        "algId": 3,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Middle",
+        "algId": 4,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Treble",
+        "algId": 5,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "122": {
+    "name": "C-Wah",
+    "descriptionEn": "Based on the Dunlop\u00ae Cry Baby\u00ae* wah.",
+    "alg": [
+      {
+        "name": "Range",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Q",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Vol",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      }
+    ]
+  },
+  "123": {
+    "name": "Whirlcho",
+    "descriptionEn": "Based on a rotary speaker / Leslie\u00ae* simulation.",
+    "alg": [
+      {
+        "name": "Depth",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Rate",
+        "algId": 1,
+        "defaultValue": 0.5,
+        "min": 0.1,
+        "max": 10,
+        "step": 0.1,
+        "unit": "Hz",
+        "widgetType": 0,
+        "syncToggleAlgId": 2
+      },
+      {
+        "name": "Sync",
+        "algId": 2,
+        "defaultValue": 0,
+        "widgetType": 1
+      }
+    ]
+  },
+  "124": {
+    "name": "Jet",
+    "descriptionEn": "Based on the A/DA\u00ae Flanger* (jet sweep).",
+    "alg": [
+      {
+        "name": "Depth",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Rate",
+        "algId": 1,
+        "defaultValue": 0.5,
+        "min": 0.1,
+        "max": 10,
+        "step": 0.1,
+        "unit": "Hz",
+        "widgetType": 0,
+        "syncToggleAlgId": 3
+      },
+      {
+        "name": "F.Back",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Sync",
+        "algId": 3,
+        "defaultValue": 0,
+        "widgetType": 1
+      }
+    ]
+  },
+  "125": {
+    "name": "Flanser",
+    "descriptionEn": "Based on the Boss\u00ae BF-2 Flanger*.",
+    "alg": [
+      {
+        "name": "Rate",
+        "algId": 0,
+        "defaultValue": 0.5,
+        "min": 0.1,
+        "max": 10,
+        "step": 0.1,
+        "unit": "Hz",
+        "widgetType": 0,
+        "syncToggleAlgId": 3
+      },
+      {
+        "name": "F-Depth",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "P-Depth",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Sync",
+        "algId": 3,
+        "defaultValue": 0,
+        "widgetType": 1
+      }
+    ]
+  },
+  "126": {
+    "name": "Phaser M",
+    "descriptionEn": "Based on the MXR\u00ae Phase 45*.",
+    "alg": [
+      {
+        "name": "Depth",
+        "algId": 1,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Rate",
+        "algId": 0,
+        "defaultValue": 0.5,
+        "min": 0.1,
+        "max": 10,
+        "step": 0.1,
+        "unit": "Hz",
+        "widgetType": 0,
+        "syncToggleAlgId": 3
+      },
+      {
+        "name": "F.Back",
+        "algId": 2,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Sync",
+        "algId": 3,
+        "defaultValue": 0,
+        "widgetType": 1
+      }
+    ]
+  },
+  "127": {
+    "name": "Vibrato ST",
+    "descriptionEn": "Based on the Boss\u00ae VB-2 Vibrato* (stereo).",
+    "alg": [
+      {
+        "name": "Depth",
+        "algId": 0,
+        "defaultValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "widgetType": 0
+      },
+      {
+        "name": "Rate",
+        "algId": 1,
+        "defaultValue": 0.5,
+        "min": 0.1,
+        "max": 10,
+        "step": 0.1,
+        "unit": "Hz",
+        "widgetType": 0,
+        "syncToggleAlgId": 2
+      },
+      {
+        "name": "Sync",
+        "algId": 2,
+        "defaultValue": 0,
+        "widgetType": 1
+      }
+    ]
+  }
+}

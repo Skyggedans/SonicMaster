@@ -1,0 +1,15 @@
+# Dart/Flutter
+**/.dart_tool/
+**/build/
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+app/.dart_tool/
+
+# Rust
+**/target/
+
+# OS
+.DS_Store
+
+# Packaging output
+/dist/
