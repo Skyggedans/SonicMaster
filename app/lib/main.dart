@@ -9,6 +9,7 @@ import 'package:window_manager/window_manager.dart';
 
 import 'device/transport.dart';
 import 'src/rust/frb_generated.dart';
+import 'state/ai_prefs.dart';
 import 'state/connection_prefs.dart';
 import 'state/device_providers.dart';
 import 'theme/app_colors.dart';
@@ -78,12 +79,14 @@ Future<void> main() async {
 
   await initTransports(); // no-op; package transports init lazily on connect
 
-  final prefs = ConnectionPrefs(await SharedPreferences.getInstance());
+  final sharedPrefs = await SharedPreferences.getInstance();
+  final prefs = ConnectionPrefs(sharedPrefs);
 
   runApp(
     ProviderScope(
       overrides: [
         connectionPrefsProvider.overrideWithValue(prefs),
+        aiPrefsProvider.overrideWithValue(AiPrefs(sharedPrefs)),
         // Seed the manual model override from the persisted value so a device
         // whose name we don't auto-recognize stays gated across launches.
         deviceModelOverrideProvider.overrideWith((_) => prefs.modelOverride),

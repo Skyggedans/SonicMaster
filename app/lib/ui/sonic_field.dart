@@ -38,6 +38,7 @@ class SonicField extends HookWidget {
     this.keyboardType,
     this.autofocus = false,
     this.maxLength,
+    this.maxLines = 1,
     this.hintText,
     this.onChanged,
     this.onSubmitted,
@@ -57,6 +58,9 @@ class SonicField extends HookWidget {
   final TextInputType? keyboardType;
   final bool autofocus;
   final int? maxLength;
+
+  /// Visible/typed line count; 1 keeps the single-line field (Enter submits).
+  final int maxLines;
   final String? hintText;
   final ValueChanged<String>? onChanged;
   final ValueChanged<String>? onSubmitted;
@@ -110,7 +114,7 @@ class SonicField extends HookWidget {
       selectAllOnFocus: selectAllOnFocus,
       autocorrect: autocorrect,
       enableSuggestions: enableSuggestions,
-      maxLines: 1,
+      maxLines: maxLines,
       scrollPadding: scrollPadding,
       cursorOpacityAnimates: true,
       rendererIgnoresPointer: true,
@@ -140,10 +144,12 @@ class SonicField extends HookWidget {
                 return Align(
                   alignment: textAlign == TextAlign.center
                       ? Alignment.center
+                      : maxLines > 1
+                      ? Alignment.topLeft
                       : Alignment.centerLeft,
                   child: Text(
                     hintText!,
-                    maxLines: 1,
+                    maxLines: maxLines,
                     overflow: TextOverflow.ellipsis,
                     style: textStyle.copyWith(color: Palette.textDim),
                   ),

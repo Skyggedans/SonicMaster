@@ -52,6 +52,8 @@ class SysexChunkUpload {
 
   static List<int> nibblePair(int b) => [(b >> 4) & 0x0F, b & 0x0F];
 
-  static String hex(List<int> bytes) =>
-      bytes.map((b) => b.toRadixString(16).padLeft(2, '0')).join().toUpperCase();
+  static String hex(List<int> bytes) => bytes
+      .map((b) => b.toRadixString(16).padLeft(2, '0'))
+      .join()
+      .toUpperCase();
 }
