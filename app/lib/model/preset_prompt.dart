@@ -19,6 +19,10 @@ const _catalogModules = [
   'RVB',
 ];
 
+/// Gate threshold the example preset and the rules steer the LLM towards. The
+/// device default (50) closes the gate far too aggressively for most tones.
+const _gateThreshold = 11;
+
 /// The effect ids [model] can select in [module]. NR has no entry in the
 /// command library (its single effect, Gate, is id 1).
 List<int> _effectIds(DataAssets data, DeviceModel model, String module) {
@@ -85,7 +89,9 @@ Map<String, dynamic> presetTemplate(DataAssets data, DeviceModel model) {
       'effect': def?.name,
       'parameters': {
         for (final p in def?.params ?? const <EffectParameter>[])
-          p.name: p.defaultValue,
+          p.name: module == 'NR' && p.name == 'THRE'
+              ? _gateThreshold
+              : p.defaultValue,
       },
     };
   }
@@ -119,6 +125,7 @@ The pedal's signal path has nine modules: NR (noise reduction), FX1, DRV (drive)
 - "effect" must be one of the effect names listed for that module in the catalog, spelled exactly as listed. Never invent an effect. Use null to leave a module without an effect.
 - "parameters" must contain every parameter of the chosen effect, keyed by the exact parameter name, with a number inside the range listed. For choice parameters use the numeric index (the number before "="); for on/off parameters use 0 or 1.
 - Set "enabled" to false for modules the tone doesn't need, and true for those it does.
+- NR (Gate) is a noise gate whose THRE (threshold) works against the playing: keep it low (around $_gateThreshold, never above 20) so notes and sustain aren't cut off. Ignore the catalog default of 50 for it. Enable NR only for high-gain tones, otherwise set "enabled" to false.
 - "ampMode" must be "Normal".
 - "presetName" is at most 10 characters.
 - "presetVolume" is 0-100 and "presetBpm" is 40-260 (match the song's tempo when known).
