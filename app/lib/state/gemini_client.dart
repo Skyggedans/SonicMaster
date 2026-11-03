@@ -1,9 +1,22 @@
 import 'dart:convert';
+import 'dart:math';
 
 import 'package:http/http.dart' as http;
 
-/// The Gemini model used to generate presets.
-const geminiModel = 'gemini-3.6-flash';
+/// The Gemini models used to generate presets. One is picked at random, and
+/// the others are the fallbacks when it fails.
+const geminiModels = [
+  'gemini-4-argon',
+  'gemini-3.8-flash',
+  'gemini-3.6-flash',
+  'gemini-3.5-flash-lite',
+];
+
+/// The time budget shared by all the requests made for a single preset.
+const geminiTimeout = Duration(seconds: 90);
+
+/// The most requests (one per model) made for a single preset.
+const geminiMaxAttempts = 3;
 
 /// A failed Gemini request, with a message fit for the UI.
 class GeminiException implements Exception {
@@ -17,19 +30,51 @@ class GeminiException implements Exception {
 
 /// Minimal client for the Gemini `generateContent` REST endpoint.
 class GeminiClient {
-  GeminiClient({required this.apiKey, http.Client? client})
-    : _client = client ?? http.Client();
+  GeminiClient({required this.apiKey, http.Client? client, Random? random})
+    : _client = client ?? http.Client(),
+      _random = random ?? Random();
 
   final String apiKey;
   final http.Client _client;
+  final Random _random;
 
   /// Asks the model to answer [prompt] under [systemPrompt] with a JSON
-  /// document, and returns it decoded. Throws [GeminiException] on a transport,
-  /// API or malformed-response failure.
+  /// document, and returns it decoded. Starts with a random model from
+  /// [geminiModels] and, on failure, tries other models, up to
+  /// [geminiMaxAttempts] requests within a total of [geminiTimeout]: each
+  /// request gets what is left of it after the failed ones. Throws the last
+  /// [GeminiException] when all of them fail.
   Future<Map<String, dynamic>> generateJson({
     required String systemPrompt,
     required String prompt,
   }) async {
+    final models = [...geminiModels]..shuffle(_random);
+    final clock = Stopwatch()..start();
+    GeminiException? last;
+
+    for (final model in models.take(geminiMaxAttempts)) {
+      final remaining = geminiTimeout - clock.elapsed;
+
+      if (remaining <= Duration.zero) break;
+
+      try {
+        return await _generateJson(model, systemPrompt, prompt, remaining);
+      } on GeminiException catch (e) {
+        last = e;
+      }
+    }
+
+    throw last!;
+  }
+
+  /// One request to [model], abandoned after [timeout]. Throws
+  /// [GeminiException] on a transport, API or malformed-response failure.
+  Future<Map<String, dynamic>> _generateJson(
+    String model,
+    String systemPrompt,
+    String prompt,
+    Duration timeout,
+  ) async {
     final http.Response res;
 
     try {
@@ -37,7 +82,7 @@ class GeminiClient {
           .post(
             Uri.https(
               'generativelanguage.googleapis.com',
-              '/v1beta/models/$geminiModel:generateContent',
+              '/v1beta/models/$model:generateContent',
             ),
             headers: {
               'Content-Type': 'application/json',
@@ -63,7 +108,7 @@ class GeminiClient {
               },
             }),
           )
-          .timeout(const Duration(seconds: 90));
+          .timeout(timeout);
     } catch (e) {
       throw GeminiException('Could not reach Gemini: $e');
     }
