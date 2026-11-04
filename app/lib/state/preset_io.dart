@@ -89,7 +89,18 @@ Future<void> importPreset(WidgetRef ref) async {
     return;
   }
 
-  if (ref.read(presetLoadingProvider)) return;
+  await pushImportedPreset(ref, imported);
+}
+
+/// Pushes [imported] to the connected pedal as the live state (Save persists it
+/// to a slot). No-op while another load/import is in flight; progress and the
+/// outcome are reported through the shared preset status text.
+Future<void> pushImportedPreset(WidgetRef ref, ImportedPreset imported) async {
+  final data = ref.read(dataAssetsProvider).valueOrNull;
+
+  if (data == null || ref.read(presetLoadingProvider)) return;
+
+  final status = ref.read(presetLoadStatusProvider.notifier);
 
   ref.read(presetLoadingProvider.notifier).state = true;
   final service = ref.read(deviceServiceProvider);

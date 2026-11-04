@@ -122,21 +122,37 @@ class CloCodec {
     );
   }
 
-  static void _writeF64s(ByteData data, int offset, List<double> values, int n) {
+  static void _writeF64s(
+    ByteData data,
+    int offset,
+    List<double> values,
+    int n,
+  ) {
     for (final (i, v) in values.take(n).indexed) {
       data.setFloat64(offset + i * 8, v, Endian.little);
     }
   }
 
-  static void _writeF32s(ByteData data, int offset, List<double> values, int n) {
+  static void _writeF32s(
+    ByteData data,
+    int offset,
+    List<double> values,
+    int n,
+  ) {
     for (final (i, v) in values.take(n).indexed) {
       data.setFloat32(offset + i * 4, v, Endian.little);
     }
   }
 
   static List<double> _readF64s(ByteData data, int offset, int n) =>
-      List<double>.generate(n, (i) => data.getFloat64(offset + i * 8, Endian.little));
+      List<double>.generate(
+        n,
+        (i) => data.getFloat64(offset + i * 8, Endian.little),
+      );
 
   static List<double> _readF32s(ByteData data, int offset, int n) =>
-      List<double>.generate(n, (i) => data.getFloat32(offset + i * 4, Endian.little));
+      List<double>.generate(
+        n,
+        (i) => data.getFloat32(offset + i * 4, Endian.little),
+      );
 }

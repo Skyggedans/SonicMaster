@@ -97,6 +97,7 @@ class DeviceCapabilities {
     _ => null,
   };
 
-  static List<String> _lower(dynamic list) =>
-      [for (final s in list as List) (s as String).toLowerCase()];
+  static List<String> _lower(dynamic list) => [
+    for (final s in list as List) (s as String).toLowerCase(),
+  ];
 }

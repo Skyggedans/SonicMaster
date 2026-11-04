@@ -103,8 +103,10 @@ ImportedPreset importedPresetFromJson(
   )).round();
   // Optional key (added after v1.0 shipped): absent in older exports -> default.
   // Range mirrors the hardware / official app (40–260).
-  final presetBpm = (((json['presetBpm'] as num?) ?? 120).clamp(40, 260))
-      .round();
+  final presetBpm = (((json['presetBpm'] as num?) ?? 120).clamp(
+    40,
+    260,
+  )).round();
 
   final moduleStates = <int, bool>{};
   final selectedEffects = <int, int>{};

@@ -45,6 +45,7 @@ dependencies:
   flutter_midi_command: ^1.0.2
   universal_ble: ^2.1.0
   web: ^1.1.1
+  http: ^1.6.0
 
 dev_dependencies:
   flutter_test:

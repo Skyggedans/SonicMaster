@@ -9,6 +9,7 @@ import '../state/preset_io.dart';
 import '../state/preset_providers.dart';
 import '../theme/app_colors.dart';
 import '../theme/app_text.dart';
+import 'ai_preset_dialog.dart';
 import 'connection_controls.dart';
 import 'fullscreen_button.dart';
 import 'global_settings_dialog.dart';
@@ -173,6 +174,13 @@ class TopBar extends ConsumerWidget {
                         padding: metrics.topBarIconPadding,
                         onPressed: (isConnected && !isLoading)
                             ? () => importPreset(ref)
+                            : null,
+                      ),
+                      SonicIconButton(
+                        icon: Icons.auto_awesome,
+                        padding: metrics.topBarIconPadding,
+                        onPressed: (isConnected && !isLoading)
+                            ? () => showAiPresetDialog(context)
                             : null,
                       ),
                       SonicIconButton(
