@@ -4,6 +4,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../state/ai_prefs.dart';
 import '../state/ai_preset.dart';
+import '../state/ai_provider.dart';
 import '../theme/app_colors.dart';
 import '../theme/app_text.dart';
 import 'sonic_controls.dart';
@@ -18,9 +19,9 @@ Future<bool?> showAiPresetDialog(BuildContext context) {
   );
 }
 
-/// Describe a tone in words; Gemini designs a preset for it and the app pushes
-/// it to the pedal (the same path as Import). The API key is the user's own and
-/// stays on this device.
+/// Describe a tone in words; the chosen AI (Gemini, ChatGPT or DeepSeek)
+/// designs a preset for it and the app pushes it to the pedal (the same path as
+/// Import). The API keys are the user's own and stay on this device.
 class AiPresetDialog extends HookConsumerWidget {
   const AiPresetDialog({super.key});
 
@@ -28,7 +29,10 @@ class AiPresetDialog extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final prefs = ref.read(aiPrefsProvider);
     final prompt = useTextEditingController();
-    final apiKey = useTextEditingController(text: prefs.geminiApiKey ?? '');
+    final provider = useState(prefs.provider);
+    final apiKey = useTextEditingController(
+      text: prefs.apiKey(provider.value) ?? '',
+    );
     final isBusy = useState(false);
     final error = useState<String?>(null);
 
@@ -39,13 +43,21 @@ class AiPresetDialog extends HookConsumerWidget {
         promptText.trim().isNotEmpty &&
         keyText.trim().isNotEmpty;
 
+    // Each provider has its own key: keep what was typed and show the next one.
+    void selectProvider(AiProvider next) {
+      prefs.saveApiKey(provider.value, apiKey.text);
+      provider.value = next;
+      apiKey.text = prefs.apiKey(next) ?? '';
+    }
+
     Future<void> generate() async {
       isBusy.value = true;
       error.value = null;
 
       try {
-        await prefs.saveGeminiApiKey(apiKey.text);
-        await generateAiPreset(ref, promptText.trim());
+        await prefs.saveProvider(provider.value);
+        await prefs.saveApiKey(provider.value, apiKey.text);
+        await generateAiPreset(ref, provider.value, promptText.trim());
 
         if (context.mounted) Navigator.pop(context, true);
       } catch (e) {
@@ -80,7 +92,18 @@ class AiPresetDialog extends HookConsumerWidget {
               style: AppText.input,
             ),
             const SizedBox(height: 14),
-            const Text('Gemini API key', style: AppText.inputLabel),
+            const Text('AI', style: AppText.inputLabel),
+            const SizedBox(height: 6),
+            SonicSegmented<AiProvider>(
+              value: provider.value,
+              isExpanded: true,
+              segments: [
+                for (final p in AiProvider.values) (value: p, label: p.label),
+              ],
+              onChanged: isBusy.value ? null : selectProvider,
+            ),
+            const SizedBox(height: 14),
+            Text('${provider.value.label} API key', style: AppText.inputLabel),
             const SizedBox(height: 6),
             SonicField(
               controller: apiKey,
